@@ -2,9 +2,7 @@ import * as React from "react"
 import { /*useAppDispatch, */useAppSelector } from "../../../app/hooks"
 import { selectPreview, selectSelected } from "../"
 import { 
-  Card,
-  CardHeader,
-  CardContent,
+  Box,
   Typography,
 } from "@mui/material"
 import { Icon } from "../../../theme"
@@ -12,10 +10,33 @@ import { Icon } from "../../../theme"
 export default function Preview() {
   const selected = useAppSelector(selectSelected)
   const preview = useAppSelector(selectPreview)
-  // console.log ("Preview", preview)
+  if(preview)console.log("preview", preview)
 
-  return <Card sx={{ m:1, p: 1 }}>
-            <CardHeader 
+  return <React.Fragment>
+          <Box 
+            sx={{ 
+              border: "1px solid black",
+              background: "#eee",
+              m:1, 
+              p: 1,
+              height: 78,
+              width: 468,
+            }}>
+          </Box>
+          <Typography variant="body2" 
+          sx={{ 
+            m:1, 
+            p: 1,
+          }}>
+            Size: Olden days (468px by 78px)
+          </Typography>
+          </React.Fragment>
+}
+
+/**
+ * 
+ * 
+ * <CardHeader 
               title={ <Typography variant="body1">
                         Preview
                       </Typography>  }
@@ -24,13 +45,11 @@ export default function Preview() {
             
             <CardContent>
               <pre>
-              selected{ JSON.stringify(selected, null, 2)}
+                selected{ JSON.stringify(selected, null, 2)}
               </pre>
             </CardContent>
-          </Card>
-}
 
-/**
+
  * <Typography variant="body2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               </Typography>

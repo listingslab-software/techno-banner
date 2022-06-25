@@ -8,7 +8,6 @@ import {
   BannerList,
   Editor,
 } from "./"
-import { Nav } from "../../components"
 
 export default function Banner() {
 
@@ -20,25 +19,16 @@ export default function Banner() {
 
   const { selected } = banner
 
-  return <Grid container>
-            <Grid item xs={ 12 } >
-              <Nav />
-            </Grid>
-            
+  return <Grid container> 
             <Grid item xs={ 12 } md={ 4 } >
-            <BannerList />
-              
+              <BannerList />
             </Grid>
             { selected ? <Grid item xs={ 12 } md={ 8 }>
                           <Editor />
                         </Grid> : null }
+            
           </Grid>
 }
 
 /*
-{ selected ? <React.Fragment>
-                            <Creator />
-                          </React.Fragment> : <React.Fragment>
-                            <BannerList />
-                          </React.Fragment> }
 */

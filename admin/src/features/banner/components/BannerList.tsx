@@ -8,7 +8,6 @@ import {
   IconButton,
   CardHeader,
   CardContent,
-  Typography,
   List,
   ListItem,
   ListItemText,
@@ -29,7 +28,7 @@ export default function BannerList() {
 
   return <Card sx={{ m:1, p: 1 }}>
             <CardHeader 
-              
+              title="Banners"
               action={<IconButton sx={{ border: `1px solid ${theme.palette.divider}` }}>
                                 <Icon icon="new" />
                               </IconButton>}
@@ -44,13 +43,13 @@ export default function BannerList() {
                     const { 
                       id,
                       brand,
-                      icon,
+                      avatar,
                       title,
                     } = item
 
-                    if (id === selected){
-                      console.log("id", id)
-                    }
+                    // if (id === selected){
+                    //   console.log("id", id)
+                    // }
 
                     return <ListItem 
                             key={`banner_${i}`}
@@ -61,7 +60,7 @@ export default function BannerList() {
                               selectBannerId(id)
                             }}>
                               <ListItemAvatar>
-                                <Avatar src={icon} />
+                                <Avatar src={avatar} />
                               </ListItemAvatar>
                               <ListItemText 
                                 primary={ title}

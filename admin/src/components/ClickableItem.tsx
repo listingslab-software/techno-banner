@@ -15,7 +15,6 @@ export interface ItemShape {
   createdAt: string
   brand: string
   offer: string
-  trackingLink: string
 }
 
 export default function ClickableItem(props:ClickableShape) {
@@ -25,12 +24,10 @@ export default function ClickableItem(props:ClickableShape) {
     id,
     offer,
     brand,
-    trackingLink,
   } = data
   
   const onItemClick = () => {
     dispatch(click(id))
-    // window.open(trackingLink, "_blank")
     // console.log ("onItemClick", id)
   }
 

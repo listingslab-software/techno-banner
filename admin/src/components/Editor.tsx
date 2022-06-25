@@ -123,6 +123,7 @@ export default function Editor() {
                         Brand
                     </Typography>
                     <InputText
+                    
                         id="brand"
                         label="Brand"
                         value={ brandValue }

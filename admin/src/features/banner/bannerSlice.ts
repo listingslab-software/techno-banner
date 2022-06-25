@@ -1,18 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
-import { bannerList } from "./bannerList"
+import { bannerList } from "./_mocks_/bannerList"
+import { bannerSizes } from "./_mocks_/bannerSizes"
 
 export interface BannerShape {
   slug: string
   list: any
+  sizes: any
   preview: any
   creator: any
   selected: any
 }
 
 const initialState: BannerShape = {
-  slug: "bannerSlice",
+  slug: "banner",
   list: bannerList,
+  sizes: bannerSizes,
   preview: null,
   creator: null,
   selected: null,
