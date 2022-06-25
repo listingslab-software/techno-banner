@@ -9,7 +9,7 @@
     "start:admin": "clear && cd ./admin && npm start",
     "build:admin": "clear && cd ./admin && npm run build",
     "deploy": "clear && npm run build && firebase deploy",
-    "test": "clear && echo \"We are fine, thanks for asking\" && exit 0"
+    "test": "clear && cd ./admin && npm run test"
   },
   "repository": {
     "type": "git",

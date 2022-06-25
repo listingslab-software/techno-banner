@@ -2,17 +2,20 @@ import * as React from "react"
 // import { useAppDispatch } from "../app/hooks"
 import { Box, TextField } from "@mui/material"
 
-export interface InputTextShape {
+export interface FieldShape {
   id: string
   value?: string
   valid?: boolean
   label: string
+  helper: string
   onChange?: any
 }
 
-export default function InputText(props: InputTextShape) {
+export default function Field(props: FieldShape) {
 
-  const { id, value, onChange } = props
+  // let id, value, onChange
+
+  const { id, value, label, helper, onChange } = props
 
   return (
     <Box
@@ -25,8 +28,8 @@ export default function InputText(props: InputTextShape) {
         id={id}
         fullWidth
         error={ false }
-        helperText={ null}
-        label={ null }
+        helperText={ helper}
+        label={ label }
         defaultValue={ value }
         onChange={ onChange }
       />

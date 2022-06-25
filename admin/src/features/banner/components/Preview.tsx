@@ -1,37 +1,37 @@
 import * as React from "react"
 import { /*useAppDispatch, */useAppSelector } from "../../../app/hooks"
-import { selectPreview, selectSelected } from "../"
 import { 
-  Card,
-  CardHeader,
-  CardContent,
-  Typography,
+  selectSelected,
+  selectList,
+} from "../"
+import { 
+  Box,
 } from "@mui/material"
-import { Icon } from "../../../theme"
 
-export default function Preview() {
-  const selected = useAppSelector(selectSelected)
-  const preview = useAppSelector(selectPreview)
-  // console.log ("Preview", preview)
-
-  return <Card sx={{ m:1, p: 1 }}>
-            <CardHeader 
-              title={ <Typography variant="body1">
-                        Preview
-                      </Typography>  }
-              avatar={ <Icon icon="preview" /> }
-            />
-            
-            <CardContent>
-              <pre>
-              selected{ JSON.stringify(selected, null, 2)}
-              </pre>
-            </CardContent>
-          </Card>
+const getBannerById = (banners:any, id:string) => {
+  for ( let i = 0; i < banners.length; i++){
+    if(banners[i].id === id){
+      return banners[i]
+    }
+  }
+  return false
 }
 
-/**
- * <Typography variant="body2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              </Typography>
- */
+export default function Preview() {
+  const list = useAppSelector(selectList)
+  const selected = useAppSelector(selectSelected)
+  const banner = getBannerById(list, selected)
+  const { colors, size } = banner
+  const { width, height } = size
+  const { background, border } = colors
+  return <Box 
+            sx={{ 
+              border: `1px solid ${border}`,
+              background,
+              m:1, 
+              p: 1,
+              height,
+              width,
+            }}>
+          </Box>
+}

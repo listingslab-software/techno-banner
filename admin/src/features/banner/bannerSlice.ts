@@ -1,21 +1,22 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
-import { bannerList } from "./bannerList"
+import { bannerList } from "./_mocks_/bannerList"
+import { bannerSizes } from "./_mocks_/bannerSizes"
 
 export interface BannerShape {
   slug: string
   list: any
-  preview: any
-  creator: any
+  sizes: any
   selected: any
+  initialSelect: boolean
 }
 
 const initialState: BannerShape = {
-  slug: "bannerSlice",
+  slug: "banner",
   list: bannerList,
-  preview: null,
-  creator: null,
+  sizes: bannerSizes,
   selected: null,
+  initialSelect: false,
 }
 
 export const bannerSlice = createSlice({
@@ -32,8 +33,6 @@ export const bannerSlice = createSlice({
 
 export const { setBanner } = bannerSlice.actions
 export const selectBanner = (state: RootState) => state.banner
-export const selectPreview = (state: RootState) => state.banner.preview
-export const selectCreator = (state: RootState) => state.banner.creator
 export const selectList = (state: RootState) => state.banner.list
 export const selectSelected = (state: RootState) => state.banner.selected
 

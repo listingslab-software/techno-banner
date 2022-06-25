@@ -38,6 +38,10 @@ import GestureIcon from "@mui/icons-material/Gesture"
 import SectionIcon from "@mui/icons-material/Assignment"
 import BashIcon from "@mui/icons-material/Terminal"
 import CloseIcon from "@mui/icons-material/Close"
+
+import BannerIcon from "@mui/icons-material/Movie"
+
+
 import CancelIcon from "@mui/icons-material/Cancel"
 import SettingsIcon from "@mui/icons-material/Settings"
 import CoderIcon from "@mui/icons-material/DesktopAccessDisabledSharp"
@@ -383,8 +387,12 @@ export default function Icon(props: any) {
         iconFragment = <RefreshIcon color={color} />
         break
       
+        
+        case "banner":
+          iconFragment = <BannerIcon color={color} />
+          break
 
-    case "share":
+        case "share":
       iconFragment = <SharedIcon color={color} />
       break
 
