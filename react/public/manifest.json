@@ -1,6 +1,6 @@
 {
-  "short_name": "TS Toplist",
-  "name": "TS Toplist",
+  "short_name": "Techno Banner",
+  "name": "Techno Banner",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#FFFFFF",
@@ -12,17 +12,17 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/logo32.png",
+      "src": "/png/logo32.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "/logo192.png",
+      "src": "/png/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/logo512.png",
+      "src": "/png/logo512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"

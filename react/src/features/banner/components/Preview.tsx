@@ -1,22 +1,33 @@
-// Template for making a new component
-
 import * as React from "react"
-// import { /*useAppDispatch, */useAppSelector } from "../app/hooks"
-// import { selectToplist } from "../features/toplist/"
-
+import { /*useAppDispatch, */useAppSelector } from "../../../app/hooks"
+import { selectPreview } from "../"
 import { 
-  Box,
+  Card,
+  CardHeader,
+  CardContent,
+  Typography,
 } from "@mui/material"
+import { Icon } from "../../../theme"
 
 export default function Preview() {
+  const preview = useAppSelector(selectPreview)
+  // console.log ("Preview", preview)
 
-  // const dispatch = useAppDispatch()
-  // const toplist = useAppSelector(selectToplist)
-  // const admin = useAppSelector(selectAdmin)
-
-  // console.log ("toplist", toplist)
-
-  return <Box sx={{ border: "1px solid red", p: 2}}>
-            Preview
-          </Box>
+  return <Card sx={{ m:1, p: 1 }}>
+            <CardHeader 
+              title={ <Typography variant="body1">
+                        Previewing...
+                      </Typography>  }
+              avatar={ <Icon icon="preview" /> }
+            />
+            
+            <CardContent>
+              <Typography variant="body2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              </Typography>
+              <pre>
+                { JSON.stringify(preview, null, 2)}
+              </pre>
+            </CardContent>
+          </Card>
 }

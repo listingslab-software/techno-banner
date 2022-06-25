@@ -11,6 +11,7 @@ import {
 } from "../theme"
 import DefaultIcon from "@mui/icons-material/DisabledByDefault"
 import HomeIcon from "@mui/icons-material/Home"
+import ListIcon from "@mui/icons-material/List"
 import EditIcon from "@mui/icons-material/Edit"
 import SaveIcon from "@mui/icons-material/Save"
 import DeleteIcon from "@mui/icons-material/Delete"
@@ -103,6 +104,13 @@ export default function Icon(props: any) {
     case "work":
       iconFragment = <WorkIcon color={color} />
       break
+
+
+      
+
+      case "list":
+        iconFragment = <ListIcon color={color} />
+        break
 
       case "save":
         iconFragment = <SaveIcon color={color} />
@@ -200,7 +208,12 @@ export default function Icon(props: any) {
     case "visibilityoff":
       iconFragment = <VisibilityOffIcon color={color} />
       break
-    case "visibility":
+
+      case "preview":
+        iconFragment = <VisibilityIcon color={color} />
+        break
+
+      case "visibility":
       iconFragment = <VisibilityIcon color={color} />
       break
 
