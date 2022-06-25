@@ -3,7 +3,6 @@ import {
     Editor, 
     Preview,
     BannerList,
-    Nav,
 } from "./components"
 import { click } from "./actions/click"
 import { create } from "./actions/create"
@@ -27,7 +26,6 @@ export {
     Editor,
     Preview,
     BannerList,
-    Nav,
     setBanner,
     selectCreator,
     selectList,

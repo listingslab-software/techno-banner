@@ -1,7 +1,7 @@
 # Techno Banner
 
 > Builds on https://github.com/listingslab-software/ts-toplist
-> Creates a React Component that will fetch data from an endpoint and populate a Casino Toplist.
+> Creates a React Component that will fetch data from an endpoint and populates a Casino Toplist
 
 ## Admin Interface
 
