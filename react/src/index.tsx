@@ -6,7 +6,7 @@ import { createTheme, ThemeProvider } from "@mui/material"
 import { getDesignTokens } from "./theme"
 import App from "./App"
 
-const container = document.getElementById("ts-toplist")!
+const container = document.getElementById("techno-banner")!
 const root = createRoot(container)
 const theme = createTheme(getDesignTokens("light"))
 
