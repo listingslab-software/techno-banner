@@ -7,9 +7,8 @@ import {
 import {
   BannerList,
   Editor,
-  Preview,
-  Nav,
 } from "./"
+import { Nav } from "../../components"
 
 export default function Banner() {
 

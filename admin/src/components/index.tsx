@@ -5,6 +5,7 @@ import Editor from "./Editor"
 import InputText from "./InputText"
 import NewComponent from "./NewComponent"
 import Notification from "./Notification"
+import Nav from "./Nav"
 
 export {
   ClickableItem,
@@ -13,5 +14,6 @@ export {
   Editor,
   InputText,
   NewComponent,
+  Nav,
   Notification,
 }

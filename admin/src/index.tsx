@@ -1,3 +1,4 @@
+import pJSON from "../package.json"
 import React from "react"
 import { createRoot } from "react-dom/client"
 import { Provider } from "react-redux"
@@ -5,6 +6,8 @@ import { store } from "./app/store"
 import { createTheme, ThemeProvider } from "@mui/material"
 import { getDesignTokens } from "./theme"
 import App from "./App"
+
+console.warn(`${pJSON.name} ${pJSON.version}`)
 
 const container = document.getElementById("techno-banner")!
 const root = createRoot(container)
