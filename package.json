@@ -6,6 +6,7 @@
   "scripts": {
     "start": "clear && cd ./react && npm start",
     "build": "clear && cd ./react && npm run build",
+    "deploy": "clear && firebase deploy",
     "test": "echo \"We are all fine, thanks for asking\" && exit 0"
   },
   "repository": {
