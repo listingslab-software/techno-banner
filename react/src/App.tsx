@@ -4,8 +4,7 @@ import {
   CssBaseline,
   Grid,
 } from "@mui/material"
-import {Admin, Clicks} from "./features/admin"
-import {Toplist} from "./features/toplist"
+import { Banner } from "./features/banner"
 
 function App() {
   
@@ -13,9 +12,8 @@ function App() {
           <CssBaseline />
           <Container>
           <Grid container spacing={1}>
-            
-            <Grid item xs={ 12 } md={ 6 }>
-              <Toplist />
+            <Grid item xs={ 12 }>
+              <Banner />
             </Grid>     
           </Grid>
           </Container>
@@ -23,10 +21,3 @@ function App() {
 }
 
 export default App
-
-/*
-<Grid item xs={12} md={ 6 }>
-              <Admin />
-              <Clicks />
-            </Grid>
-*/
