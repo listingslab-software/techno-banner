@@ -7,18 +7,16 @@ export interface BannerShape {
   slug: string
   list: any
   sizes: any
-  preview: any
-  creator: any
   selected: any
+  initialSelect: boolean
 }
 
 const initialState: BannerShape = {
   slug: "banner",
   list: bannerList,
   sizes: bannerSizes,
-  preview: null,
-  creator: null,
   selected: null,
+  initialSelect: false,
 }
 
 export const bannerSlice = createSlice({
@@ -35,8 +33,6 @@ export const bannerSlice = createSlice({
 
 export const { setBanner } = bannerSlice.actions
 export const selectBanner = (state: RootState) => state.banner
-export const selectPreview = (state: RootState) => state.banner.preview
-export const selectCreator = (state: RootState) => state.banner.creator
 export const selectList = (state: RootState) => state.banner.list
 export const selectSelected = (state: RootState) => state.banner.selected
 

@@ -1,56 +1,37 @@
 import * as React from "react"
 import { /*useAppDispatch, */useAppSelector } from "../../../app/hooks"
-import { selectPreview, selectSelected } from "../"
+import { 
+  selectSelected,
+  selectList,
+} from "../"
 import { 
   Box,
-  Typography,
 } from "@mui/material"
-import { Icon } from "../../../theme"
 
-export default function Preview() {
-  const selected = useAppSelector(selectSelected)
-  const preview = useAppSelector(selectPreview)
-  if(preview)console.log("preview", preview)
-
-  return <React.Fragment>
-          <Box 
-            sx={{ 
-              border: "1px solid black",
-              background: "#eee",
-              m:1, 
-              p: 1,
-              height: 78,
-              width: 468,
-            }}>
-          </Box>
-          <Typography variant="body2" 
-          sx={{ 
-            m:1, 
-            p: 1,
-          }}>
-            Size: Olden days (468px by 78px)
-          </Typography>
-          </React.Fragment>
+const getBannerById = (banners:any, id:string) => {
+  for ( let i = 0; i < banners.length; i++){
+    if(banners[i].id === id){
+      return banners[i]
+    }
+  }
+  return false
 }
 
-/**
- * 
- * 
- * <CardHeader 
-              title={ <Typography variant="body1">
-                        Preview
-                      </Typography>  }
-              avatar={ <Icon icon="preview" /> }
-            />
-            
-            <CardContent>
-              <pre>
-                selected{ JSON.stringify(selected, null, 2)}
-              </pre>
-            </CardContent>
-
-
- * <Typography variant="body2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              </Typography>
- */
+export default function Preview() {
+  const list = useAppSelector(selectList)
+  const selected = useAppSelector(selectSelected)
+  const banner = getBannerById(list, selected)
+  const { colors, size } = banner
+  const { width, height } = size
+  const { background, border } = colors
+  return <Box 
+            sx={{ 
+              border: `1px solid ${border}`,
+              background,
+              m:1, 
+              p: 1,
+              height,
+              width,
+            }}>
+          </Box>
+}

@@ -3,7 +3,11 @@ import {
     Editor, 
     Preview,
     BannerList,
+    Field,
 } from "./components"
+
+import { initFirst } from "./actions/initFirst"
+import { getBannerById } from "./actions/getBannerById"
 import { click } from "./actions/click"
 import { create } from "./actions/create"
 import { del } from "./actions/del"
@@ -15,10 +19,9 @@ import { update } from "./actions/update"
 import { 
     setBanner,
     selectBanner,
-    selectPreview,
-    selectCreator,
     selectList,
     selectSelected,
+    
  } from "./bannerSlice"
 
 export {
@@ -26,12 +29,13 @@ export {
     Editor,
     Preview,
     BannerList,
+    Field,
+    initFirst,
+    getBannerById,
     setBanner,
-    selectCreator,
     selectList,
     selectSelected,
     selectBanner,
-    selectPreview,
     click,
     create,
     del,

@@ -31,7 +31,11 @@ export default function Nav() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="secondary">
+      <AppBar 
+        sx={{ 
+          boxShadow: "none",
+        }}
+        position="static" color="secondary">
         <Toolbar>
           <IconButton
             size="large"

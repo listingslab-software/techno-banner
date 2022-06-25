@@ -1,8 +1,8 @@
 import { PaletteMode } from "@mui/material"
 
 const theme = {
-  primary: "#ee1c25",
-  secondary: "#231f20",
+  primary: "#231f20",
+  secondary: "#ee1c25",
 }
 
 const { primary, secondary } = theme
@@ -10,6 +10,9 @@ const { primary, secondary } = theme
 export const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
     mode,
+    background: {
+      default: secondary,
+    },
     primary: {
       main: primary,
     },
