@@ -1,17 +1,19 @@
 {
   "name": "techno-banner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Smarter than your average banner",
   "main": "index.js",
   "scripts": {
-    "start": "clear && cd ./react && npm start",
-    "build": "clear && cd ./react && npm run build",
-    "deploy": "clear && firebase deploy",
-    "test": "echo \"We are all fine, thanks for asking\" && exit 0"
+    "start": "clear && npm run start:admin",
+    "build": "clear && npm run build:admin",
+    "start:admin": "clear && cd ./admin && npm start",
+    "build:admin": "clear && cd ./admin && npm run build",
+    "deploy": "clear && npm run build && firebase deploy",
+    "test": "clear && echo \"We are fine, thanks for asking\" && exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/listingslab-software/techno-banner.git"
+    "url": "https://github.com/listingslab-software/techno-banner"
   },
   "author": "listingslab",
   "keywords": [
