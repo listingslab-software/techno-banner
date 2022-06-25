@@ -10,13 +10,12 @@ export const bannerList = [
         avatar: "/png/icons/blokey.png",
         size:{
             width: 478,
-            height: 68,
+            height: 120,
         },
         colors: {
             border: "#222",
             background: "#333",
         },
-
     },
     {   
         id: "banner_0000002", 
