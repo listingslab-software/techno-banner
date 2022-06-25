@@ -13,10 +13,7 @@ function App() {
           <CssBaseline />
           <Container>
           <Grid container spacing={1}>
-            <Grid item xs={12} md={ 6 }>
-              <Admin />
-              <Clicks />
-            </Grid>
+            
             <Grid item xs={ 12 } md={ 6 }>
               <Toplist />
             </Grid>     
@@ -26,3 +23,10 @@ function App() {
 }
 
 export default App
+
+/*
+<Grid item xs={12} md={ 6 }>
+              <Admin />
+              <Clicks />
+            </Grid>
+*/

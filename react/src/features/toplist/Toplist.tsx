@@ -42,6 +42,7 @@ export default function Toplist() {
           </AccordionSummary>
           <AccordionDetails> 
             {list.map((item:any, i: number) => {
+              if (i > 2) return null
               return <ClickableItem 
                         key={`item_${i}`}
                         data={item}
