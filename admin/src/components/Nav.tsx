@@ -30,10 +30,10 @@ export default function Nav() {
   }
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, mb: 2 }}>
       <AppBar 
         sx={{ 
-          boxShadow: "none",
+          // boxShadow: "none",
         }}
         position="static" color="secondary">
         <Toolbar>
@@ -49,7 +49,7 @@ export default function Nav() {
           </IconButton>
           <Typography variant="h6" component="div" 
           sx={{ flexGrow: 1, fontWeight: "lighter" }}>
-            Techno Banner Admin
+            Techno Banners
           </Typography>
           <IconButton
             size="large"

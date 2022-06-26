@@ -22,7 +22,7 @@ export const bannerList = [
         title: "Munted Duck Slots",
         description: "",
         slug:"munted-duck-slots",
-        deal: "Free spins of the wheel",
+        deal: "Free Spins",
         details: "Paid when a user deposits money. and contuniues to be paid as they loose it",
         brand: "Munted Duck Casino",
         avatar: "/png/icons/duck.png",

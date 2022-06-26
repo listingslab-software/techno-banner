@@ -34,9 +34,13 @@ export default function Banner() {
               <BannerList />
             </Grid>
             { selected ? <Grid item xs={ 12 } md={ 8 }>
-                          <Preview />
-                          <Editor />
-                        </Grid> : null }
+                            <Editor />
+                          </Grid> : null }
+            <Grid item xs={ 12 }>
+              <Preview />
+            </Grid>
+
+
           </Grid>
 }
 

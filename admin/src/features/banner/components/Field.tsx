@@ -4,8 +4,10 @@ import { Box, TextField } from "@mui/material"
 
 export interface FieldShape {
   id: string
+  autoFocus?: boolean
   value?: string
   valid?: boolean
+  pristine?: boolean
   label: string
   helper: string
   onChange?: any
@@ -13,9 +15,16 @@ export interface FieldShape {
 
 export default function Field(props: FieldShape) {
 
-  // let id, value, onChange
-
-  const { id, value, label, helper, onChange } = props
+  const { 
+    autoFocus,
+    id,
+    value, 
+    valid,
+    label, 
+    helper, 
+    onChange,
+    pristine,
+  } = props
 
   return (
     <Box
@@ -25,10 +34,11 @@ export default function Field(props: FieldShape) {
       }}
     >
       <TextField
+        autoFocus={autoFocus}
         id={id}
         fullWidth
-        error={ false }
-        helperText={ helper}
+        error={ !valid }
+        helperText={ !pristine && !valid ? helper : null }
         label={ label }
         defaultValue={ value }
         onChange={ onChange }
