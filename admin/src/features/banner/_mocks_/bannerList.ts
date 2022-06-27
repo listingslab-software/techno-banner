@@ -10,20 +10,19 @@ export const bannerList = [
         avatar: "/png/icons/blokey.png",
         size:{
             width: 478,
-            height: 68,
+            height: 120,
         },
         colors: {
             border: "#222",
             background: "#333",
         },
-
     },
     {   
         id: "banner_0000002", 
         title: "Munted Duck Slots",
         description: "",
         slug:"munted-duck-slots",
-        deal: "Free spins of the wheel",
+        deal: "Free Spins",
         details: "Paid when a user deposits money. and contuniues to be paid as they loose it",
         brand: "Munted Duck Casino",
         avatar: "/png/icons/duck.png",

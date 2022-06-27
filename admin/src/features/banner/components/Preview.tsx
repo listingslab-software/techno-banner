@@ -21,6 +21,7 @@ export default function Preview() {
   const list = useAppSelector(selectList)
   const selected = useAppSelector(selectSelected)
   const banner = getBannerById(list, selected)
+  if (!banner) return null
   const { colors, size } = banner
   const { width, height } = size
   const { background, border } = colors

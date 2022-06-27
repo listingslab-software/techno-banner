@@ -1,6 +1,6 @@
 {
-  "name": "techno-banner",
-  "version": "0.0.2",
+  "name": "banner-admin",
+  "version": "0.0.3",
   "description": "Smarter than your average banner",
   "main": "index.js",
   "scripts": {

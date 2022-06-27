@@ -7,7 +7,7 @@ import {
 } from "./components"
 
 import { initFirst } from "./actions/initFirst"
-import { getBannerById } from "./actions/getBannerById"
+// import { getBannerById } from "./actions/getBannerById"
 import { click } from "./actions/click"
 import { create } from "./actions/create"
 import { del } from "./actions/del"
@@ -31,7 +31,7 @@ export {
     BannerList,
     Field,
     initFirst,
-    getBannerById,
+    // getBannerById,
     setBanner,
     selectList,
     selectSelected,
